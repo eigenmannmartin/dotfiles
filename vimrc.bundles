@@ -15,7 +15,6 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'blarghmatey/split-expander'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
-Bundle 'kien/ctrlp.vim'
 Bundle 'geekjuice/vim-spec'
 Bundle 'tpope/vim-bundler'
 Bundle 'airblade/vim-gitgutter'
@@ -47,6 +46,7 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jsx/jsx.vim'
 Bundle 'terryma/vim-expand-region'
 Bundle 'wikitopian/hardmode'
+Bundle 'ctrlpvim/ctrlp.vim'
 
 filetype on
 
