@@ -1,0 +1,92 @@
+// vim:ts=4:sw=4:et
+
+{
+        // this is a manually added container to restore the vertical split
+            "layout": "splitv",
+                "percent": 0.5,
+                    "type": "con",
+                        "nodes": [
+
+{
+    "layout": "splith", 
+    "border": "none",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 506,
+       "width": 642,
+       "x": 0,
+       "y": 0
+    },
+    "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
+    "percent": 0.8,
+    "swallows": [
+       {
+       "class": "^Gnome\\-terminal$"
+       // "instance": "^gnome\\-terminal\\-server$",
+       // "title": "^martin\\@martin\\-Lenovo\\-Yoga\\-2\\-Pro\\:\\ \\~$",
+       // "transient_for": "^$",
+       // "window_role": "^gnome\\-terminal\\-window\\-30860b7d\\-3c4b\\-4701\\-9e09\\-02af3a0fe277$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splith split container with 2 children
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": 0.2,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": { 
+              "height": 506,
+               "width": 642,
+               "x": 0,
+               "y": 0
+            },
+            "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               // "instance": "^gnome\\-terminal\\-server$",
+               // "title": "^martin\\@martin\\-Lenovo\\-Yoga\\-2\\-Pro\\:\\ \\~$",
+               // "transient_for": "^$",
+               // "window_role": "^gnome\\-terminal\\-window\\-13c949b0\\-112a\\-4f18\\-8f4d\\-897477db1b45$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 506,
+               "width": 642,
+               "x": 0,
+               "y": 0
+            },
+            "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               // "instance": "^gnome\\-terminal\\-server$",
+               // "title": "^martin\\@martin\\-Lenovo\\-Yoga\\-2\\-Pro\\:\\ \\~$",
+               // "transient_for": "^$",
+               // "window_role": "^gnome\\-terminal\\-window\\-540c7bb8\\-bae2\\-4f65\\-8ab2\\-a06dace140bb$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+    ]
+}
