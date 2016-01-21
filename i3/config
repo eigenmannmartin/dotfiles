@@ -34,6 +34,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# disable border
+new_window none
+new_float none
+
 # thin borders
 hide_edge_borders both
 
@@ -48,7 +52,7 @@ floating_modifier $mod
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu'
 
 # change focus
-bindsym $mod+h focus left
+#bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
@@ -60,7 +64,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-#bindsym $mod+h split h
+bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -130,7 +134,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
@@ -166,6 +169,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    mode hide
+    hidden_state hide
+    modifier Mod4
   	status_command i3blocks -c ~/.i3/i3blocks.conf
 	colors {
 		background $bg-color
@@ -190,6 +196,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id owncloud
 exec --no-startup-id redshift
 exec --no-startup-id syndaemon -d -i 0.5 -t -K
+exec --no-startup-id i3-msg "workspace $tag1; append_layout ~/.i3/workspace-2.json"
+exec --no-startup-id i3-msg 'workspace $tag1; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $tag1; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $tag2; exec i3-sensible-terminal'
 #exec --no-startup-id i3-msg 'workspace $tag2; exec subl'

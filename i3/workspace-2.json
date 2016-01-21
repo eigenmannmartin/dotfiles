@@ -1,0 +1,70 @@
+// vim:ts=4:sw=4:et
+
+{
+  "layout": "splitv",
+  "percent": 0.5,
+  "type": "con",
+  "nodes": [
+    {
+      "layout": "splith",
+      "border": "none",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 506,
+        "width": 642,
+        "x": 0,
+        "y": 0
+      },
+      "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
+      "percent": 0.8,
+      "swallows": [
+        {}
+      ],
+      "type": "con"
+    },
+    {
+      "border": "none",
+      "floating": "auto_off",
+      "layout": "splith",
+      "percent": 0.2,
+      "type": "con",
+      "nodes": [
+        {
+          "border": "none",
+          "current_border_width": 0,
+          "floating": "auto_off",
+          "geometry": {
+            "height": 506,
+            "width": 642,
+            "x": 0,
+            "y": 0
+          },
+          "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
+          "percent": 0.5,
+          "swallows": [
+            {}
+          ],
+          "type": "con"
+        },
+        {
+          "border": "none",
+          "current_border_width": 0,
+          "floating": "auto_off",
+          "geometry": {
+            "height": 506,
+            "width": 642,
+            "x": 0,
+            "y": 0
+          },
+          "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
+          "percent": 0.5,
+          "swallows": [
+            {}
+          ],
+          "type": "con"
+        }
+      ]
+    }
+  ]
+}
