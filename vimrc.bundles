@@ -47,6 +47,7 @@ Bundle 'jsx/jsx.vim'
 Bundle 'terryma/vim-expand-region'
 Bundle 'wikitopian/hardmode'
 Bundle 'ctrlpvim/ctrlp.vim'
+Plugin 'severin-lemaignan/vim-minimap'
 
 filetype on
 

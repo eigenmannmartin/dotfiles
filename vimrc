@@ -37,6 +37,12 @@ map <Leader>gp :Gpush<CR>
 map <Leader>t :NERDTreeToggle<CR>
 map <Leader>f :NERDTreeFind<CR>
 
+" airline options
+let g:airline_powerline_fonts=1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_theme='base16'
+
 " Reduce timeout after <ESC> is recvd. This is only a good idea on fast links.
 set ttimeout
 set ttimeoutlen=20
