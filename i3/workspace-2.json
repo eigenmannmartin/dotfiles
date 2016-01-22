@@ -19,7 +19,9 @@
       "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
       "percent": 0.8,
       "swallows": [
-        {}
+        {
+          "class": "^Gnome\\-terminal$"
+        }
       ],
       "type": "con"
     },
@@ -43,7 +45,9 @@
           "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
           "percent": 0.5,
           "swallows": [
-            {}
+            {
+            	 "class": "^Gnome\\-terminal$"
+            }
           ],
           "type": "con"
         },
@@ -60,7 +64,9 @@
           "name": "martin@martin-Lenovo-Yoga-2-Pro: ~",
           "percent": 0.5,
           "swallows": [
-            {}
+            {
+            	 "class": "^Gnome\\-terminal$"
+            }
           ],
           "type": "con"
         }
