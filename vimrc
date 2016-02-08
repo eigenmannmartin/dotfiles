@@ -18,12 +18,27 @@ let g:ruby_path="~/.rvm/bin/ruby"
 " have jsx highlighting/indenting work in .js files as well
 let g:jsx_ext_required = 0
 
+" set syntastic settings
+let g:syntastic_javascript_checkers = ['eslint']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
 let $PATH='/usr/local/bin:' . $PATH
 
 :au FocusLost * :wa "Save on focus lost
 
 " Sessions
 let g:session_autoload = 'no'
+
+" Autoreload
+set autoread
 
 " Leader Mappings
 map <Space> <leader>
@@ -53,7 +68,7 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline
 set cursorline
 
-"key to insert mode with paste using F2 key
+" key to insert mode with paste using F2 key
 map <F2> :set paste<CR>i
 " Leave paste mode on exit
 au InsertLeave * set nopaste
