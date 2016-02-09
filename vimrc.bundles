@@ -48,6 +48,7 @@ Bundle 'terryma/vim-expand-region'
 Bundle 'wikitopian/hardmode'
 Bundle 'ctrlpvim/ctrlp.vim'
 Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'Valloric/YouCompleteMe'
 
 filetype on
 

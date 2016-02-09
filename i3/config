@@ -162,20 +162,20 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/BG-Heartbeat.jpg
 exec --no-startup-id owncloud
 exec --no-startup-id redshift
-exec --no-startup-id syndaemon -d -i 0.5 -t -K
+#exec --no-startup-id syndaemon -d -i 0.5 -t -K
 #exec --no-startup-id i3-msg "workspace 2; append_layout ~/.i3/workspace-2.json"
 #exec --no-startup-id exec i3-sensible-terminal
 #exec --no-startup-id exec i3-sensible-terminal
 #exec --no-startup-id exec i3-sensible-terminal
 #exec --no-startup-id i3-msg 'workspace $tag2; exec subl'
-exec --no-startup-id i3-msg 'workspace $tag10; exec i3-sensible-terminal -e htop'
-exec --no-startup-id i3-msg 'workspace $tag9; exec i3-sensible-terminal -e mc'
-exec --no-startup-id i3-msg 'workspace $tag4; exec thunderbird'
+#exec --no-startup-id i3-msg 'workspace $tag10; exec i3-sensible-terminal -e htop'
+#exec --no-startup-id i3-msg 'workspace $tag9; exec i3-sensible-terminal -e mc'
+#exec --no-startup-id i3-msg 'workspace $tag4; exec thunderbird'
 #exec --no-startup-id i3-msg 'workspace 6; exec spotify'
 exec --no-startup-id compton -f
 exec_always --no-startup-id /usr/bin/setxkbmap -option "caps:swapescape"
 # Set Resolution
-exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
+#exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
 
 # Custom KeyBinds
 bindsym Control+mod1+l exec sh ~/.i3/i3lock.sh
