@@ -7,17 +7,19 @@ au BufNewFile,BufRead,BufEnter   *.txt     setlocal spell    spelllang=de_de
 au BufNewFile,BufRead,BufEnter   *.js      setlocal spell    spelllang=en_us
 au BufNewFile,BufRead,BufEnter   README    setlocal spell    spelllang=en_us
 
-
+" vim hardMode
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
+" fast redraw/do not draw if macro is executed
 set ttyfast
 set lazyredraw
 
+" Ruby
 let g:ruby_path="~/.rvm/bin/ruby"
 
+" JS
 " have jsx highlighting/indenting work in .js files as well
 let g:jsx_ext_required = 0
-
 " set syntastic settings
 let g:syntastic_javascript_checkers = ['eslint']
 set statusline+=%#warningmsg#
@@ -28,11 +30,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_junp = 1
 
 
 let $PATH='/usr/local/bin:' . $PATH
 
-:au FocusLost * :wa "Save on focus lost
+" Save on focus lost
+:au FocusLost * :wa
 
 " Sessions
 let g:session_autoload = 'no'
@@ -43,12 +47,13 @@ set autoread
 " Leader Mappings
 map <Space> <leader>
 map <Leader>w :update<CR>
+map <Leader>s :w<CR>
 map <Leader>q :qall<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>gc :Gcommit<CR>
 map <Leader>gp :Gpush<CR>
-"
 
+" NertTree
 map <Leader>t :NERDTreeToggle<CR>
 map <Leader>f :NERDTreeFind<CR>
 
@@ -103,7 +108,7 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
-let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
+let g:fuzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -142,9 +147,9 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 augroup END
 
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
+" Softtabs, 4 spaces
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " Display extra whitespace
