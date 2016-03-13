@@ -6,10 +6,12 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.config/nvim: "vim/"
     ~/.config/nvim/init.vim: "vim/vimrc"
     ~/.vim: "vim/"
     ~/.zshrc: 'zsh/zshrc'
     ~/.tmux.conf: 'tmux/tmux.conf'
+    ~/.config/redshift.conf: 'redshift/redshift.conf'
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
