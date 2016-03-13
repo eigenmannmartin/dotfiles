@@ -177,6 +177,7 @@ set number
 let no_buffers_menu=1
 if !exists('g:not_finsh_neobundle')
   set background=dark
+  let g:solarized_termcolors=256
   colorscheme solarized
 endif
 
