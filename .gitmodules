@@ -4,3 +4,9 @@
 [submodule "zsh/slimzsh"]
 	path = zsh/slimzsh
 	url = https://github.com/changs/slimzsh
+[submodule "tmux/tpm"]
+	path = tmux/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
