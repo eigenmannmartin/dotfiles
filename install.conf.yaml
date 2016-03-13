@@ -6,6 +6,7 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.config/nvim/init.vim: "vim/vimrc"
     ~/.vim: "vim/"
     ~/.zshrc: 'zsh/zshrc'
     ~/.tmux.conf: 'tmux/tmux.conf'
