@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.gitconfig: 'gitconfig'
     ~/.dotfiles: ''
     ~/.config/nvim: "vim/"
     ~/.config/nvim/init.vim: "vim/vimrc"
