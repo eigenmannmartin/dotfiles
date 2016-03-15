@@ -15,4 +15,5 @@
     ~/.config/redshift.conf: 'redshift/redshift.conf'
 
 - shell:
+  - [~/.dotfiles/shell/ctrlh.sh]
   - [git submodule update --init --recursive, Installing submodules]
