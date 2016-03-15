@@ -17,3 +17,4 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [nvim +PlugInstall +qa]
+  - [npm install -g eslint-cli]

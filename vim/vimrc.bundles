@@ -33,4 +33,6 @@ Plug 'numkil/ag.nvim'
 
 Plug 'Shougo/deoplete.nvim'
 
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
