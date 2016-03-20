@@ -52,8 +52,8 @@ augroup END
 let g:is_posix = 1
 
 " Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set shiftround
 set expandtab
 
@@ -81,6 +81,7 @@ set colorcolumn=+1
 
 " Numbers
 set relativenumber
+set number
 set numberwidth=5
 
 " Tab completion
@@ -216,6 +217,9 @@ noremap <Leader>gr :Gremove<CR>
 " nnoremap <leader>ss :SaveSession<Space>
 " nnoremap <leader>sd :DeleteSession<CR>
 " nnoremap <leader>sc :CloseSession<CR>
+
+" Fast exit insert-mode
+:inoremap jk <ESC>
 
 "" Tabs
 nnoremap <Tab> gt

@@ -35,4 +35,6 @@ Plug 'Shougo/deoplete.nvim'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+" Plug 'gorodinskiy/vim-coloresque'
+
 call plug#end()
