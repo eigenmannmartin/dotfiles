@@ -37,4 +37,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Plug 'gorodinskiy/vim-coloresque'
 
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/yajs.vim'
+
 call plug#end()

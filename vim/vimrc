@@ -157,6 +157,9 @@ autocmd! BufWritePost,BufEnter * Neomake
 " Autocomplete
 let g:deoplete#enable_at_startup = 1
 
+" Syntax
+let g:used_javascript_libs = 'react, jasmine, chai, flux'
+
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
@@ -193,6 +196,13 @@ augroup vimrc-wrapping
   autocmd BufRead,BufNewFile *.txt call s:setupWrapping()
 augroup END
 
+"" nowrap
+set nowrap
+
+"" copy all to system
+" set clipboard=unnamedplus
+vnoremap y "+y
+
 set autoread
 
 "*****************************************************************************
@@ -219,7 +229,8 @@ noremap <Leader>gr :Gremove<CR>
 " nnoremap <leader>sc :CloseSession<CR>
 
 " Fast exit insert-mode
-:inoremap jk <ESC>
+:vnoremap jk <ESC> :w<CR>
+:inoremap jk <ESC> :w<CR>
 
 "" Tabs
 nnoremap <Tab> gt
