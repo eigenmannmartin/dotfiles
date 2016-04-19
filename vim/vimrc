@@ -23,6 +23,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
 colorscheme solarized
 
+" Enable Syntax for pgsql
+source ~/.vim/syntax/pgsql.vim
+
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
   runtime! macros/matchit.vim
@@ -150,15 +153,22 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
 
+" Autocomplete
+let g:deoplete#enable_at_startup = 1
+
 " JS Linter
 let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd! BufWritePost,BufEnter * Neomake
 
-" Autocomplete
-let g:deoplete#enable_at_startup = 1
+" neomake
+nmap <Leader><Space>o :lopen<CR>      " open location window
+nmap <Leader><Space>c :lclose<CR>     " close location window
+nmap <Leader><Space>, :ll<CR>         " go to current error/warning
+nmap <Leader><Space>n :lnext<CR>      " next error/warning
+nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
 " Syntax
-let g:used_javascript_libs = 'react, jasmine, chai, flux'
+" let g:used_javascript_libs = 'react, jasmine, chai, flux'
 
 "*****************************************************************************
 "" Abbreviations
@@ -229,8 +239,9 @@ noremap <Leader>gr :Gremove<CR>
 " nnoremap <leader>sc :CloseSession<CR>
 
 " Fast exit insert-mode
-:vnoremap jk <ESC> :w<CR>
-:inoremap jk <ESC> :w<CR>
+:vnoremap SS <ESC> :w<CR>
+:inoremap SS <ESC> :w<CR>
+:nnoremap SS <ESC> :w<CR>
 
 "" Tabs
 nnoremap <Tab> gt
