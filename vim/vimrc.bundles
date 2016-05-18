@@ -37,7 +37,14 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Plug 'gorodinskiy/vim-coloresque'
 
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'othree/yajs.vim'
+" Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'othree/yajs.vim'
+" Plug 'othree/es.next.syntax.vim'
+" Plug 'jelera/vim-javascript-syntax'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'Raimondi/delimitMate'
+
+Plug 'geekjuice/vim-mocha'
+Plug 'jgdavey/tslime.vim'
 
 call plug#end()
