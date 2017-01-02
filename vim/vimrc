@@ -264,6 +264,9 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call Send_to_Tmux("npm run test\n")<CR>
 
 "" SnipMate
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['js'] = 'mocha'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+
+"" Remove unused modes
+map q: <Nop>
+nnoremap Q <nop>
