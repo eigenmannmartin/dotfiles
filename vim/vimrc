@@ -19,7 +19,7 @@ syntax on
 " Enable TrueColor NVIM
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Enable dark solarized theme
-set background=light
+set background=dark
 colorscheme solarized
 
 filetype plugin indent on
@@ -254,14 +254,14 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:tmux_navigator_save_on_switch = 1
 
 "" Run MochaSpecs from vim
-let g:mocha_js_command = 'call Send_to_Tmux("\n\n npm run test:unit:file {spec} -s \n")'
+let g:mocha_js_command = 'call Send_to_Tmux("\n npm run test:unit:file {spec} -s \n ")'
 " let g:tslime_always_current_session = 1
 " let g:tslime_always_current_window = 1
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call Send_to_Tmux("npm run test\n")<CR>
+map <Leader>a :call Send_to_Tmux("\n npm run test -s \n")<CR>
 
 "" SnipMate
 let g:UltiSnipsExpandTrigger="<tab>"
