@@ -9,7 +9,6 @@ set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
-set laststatus=2  " Always display the status line
 " set autowrite     " Automatically :write before running commands
 
 if filereadable(expand("~/.vim/vimrc.bundles"))
@@ -22,14 +21,6 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Enable dark solarized theme
 set background=light
 colorscheme solarized
-
-" Enable Syntax for pgsql
-source ~/.vim/syntax/pgsql.vim
-
-" Load matchit.vim, but only if the user hasn't installed a newer version.
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
-endif
 
 filetype plugin indent on
 
@@ -111,11 +102,6 @@ nnoremap <leader><leader> <c-^>
 
 " Enable AutoClose Brakets
 let delimitMate_expand_cr = 1
-" nnoremap <silent> <Leader>t :TestFile<CR>
-" nnoremap <silent> <Leader>s :TestNearest<CR>
-" nnoremap <silent> <Leader>l :TestLast<CR>
-" nnoremap <silent> <Leader>a :TestSuite<CR>
-" nnoremap <silent> <leader>gt :TestVisit<CR>
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
@@ -176,9 +162,6 @@ nmap <Leader><Space>, :ll<CR>         " go to current error/warning
 nmap <Leader><Space>n :lnext<CR>      " next error/warning
 nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
-" Syntax
-" let g:used_javascript_libs = 'react, jasmine, chai, flux'
-
 "*****************************************************************************
 "" Abbreviations
 "*****************************************************************************
@@ -231,39 +214,12 @@ set autoread
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
-"" Git
-noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gpush :Gpush<CR>
-noremap <Leader>gpull :Gpull<CR>
-noremap <Leader>gs :Gstatus<CR>
-noremap <Leader>gb :Gblame<CR>
-noremap <Leader>gd :Gvdiff<CR>
-noremap <Leader>gr :Gremove<CR>
-
-" session management
-" nnoremap <leader>so :OpenSession<Space>
-" nnoremap <leader>ss :SaveSession<Space>
-" nnoremap <leader>sd :DeleteSession<CR>
-" nnoremap <leader>sc :CloseSession<CR>
-
-" Fast exit insert-mode
-:vnoremap SS <ESC> :w<CR>
-:inoremap SS <ESC> :w<CR>
-:nnoremap SS <ESC> :w<CR>
-
 "" Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
-set visualbell t_vb=
-
-"" Copy/Paste/Cut
-" if has('unnamedplus')
-"   set clipboard=unnamed,unnamedplus
-" endif
-
+"" C&P
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
@@ -298,12 +254,16 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:tmux_navigator_save_on_switch = 1
 
 "" Run MochaSpecs from vim
-" let g:mocha_js_command = "!mocha --compilers js:babel-core/register --require src/helpers/setup.js --recursive {spec}"
-let g:mocha_js_command = 'call Send_to_Tmux("mocha --compilers js:babel-core/register --require src/helpers/setup.js --recursive {spec}\n")'
-let g:tslime_always_current_session = 1
-let g:tslime_always_current_window = 1
+let g:mocha_js_command = 'call Send_to_Tmux("\n\n npm run test:unit:file {spec} -s \n")'
+" let g:tslime_always_current_session = 1
+" let g:tslime_always_current_window = 1
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call Send_to_Tmux("npm run test\n")<CR>
+
+"" SnipMate
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['js'] = 'mocha'

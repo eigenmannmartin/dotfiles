@@ -1,1 +1,1 @@
-/home/martin/data/private/dotfiles/vim/vimrc
+/home/martin/data/eigenmannmartin/dotfiles/vim/vimrc
