@@ -41,6 +41,12 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
 augroup END
 
+" flow
+let g:flow#autoclose = 1
+let g:flow#errjmp = 0
+let g:flow#qfsize = 2
+let g:flow#omnifunc = 0
+
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
 let g:is_posix = 1
@@ -254,14 +260,14 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:tmux_navigator_save_on_switch = 1
 
 "" Run MochaSpecs from vim
-let g:mocha_js_command = 'call Send_to_Tmux("\n npm run test:unit:file {spec} -s \n ")'
-" let g:tslime_always_current_session = 1
-" let g:tslime_always_current_window = 1
+let g:mocha_js_command = 'call Send_to_Tmux("\n FORCE_COLOR=true npm run test:unit:file {spec} -s \n ")'
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
 
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call Send_to_Tmux("\n npm run test -s \n")<CR>
+map <Leader>a :call Send_to_Tmux("\n FORCE_COLOR=true npm run test -s \n")<CR>
 
 "" SnipMate
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -270,3 +276,27 @@ let g:UltiSnipsJumpForwardTrigger="<c-n>"
 "" Remove unused modes
 map q: <Nop>
 nnoremap Q <nop>
+
+"" FZF
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" Default fzf layout
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
+
+" In Neovim, you can set up fzf window using a Vim command
+let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'window': '-tabnew' }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+map <c-P> :Ag <CR>
+
